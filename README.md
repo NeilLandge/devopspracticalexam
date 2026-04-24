@@ -16,13 +16,10 @@ A merge conflict was created when the same section of README.md was modified in:
 - main branch
 - feature-branch
 
-<<<<<<< HEAD
 ## Main Branch Update
 This line is added in main branch.
-=======
 ## Feature Branch Update
 This line is added in feature branch.
->>>>>>> feature-branch
 
 ### Steps to Resolve
 1. Opened the conflicted file in VS Code
