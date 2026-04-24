@@ -1,0 +1,113 @@
+PS C:\Users\CCLab-63\Desktop\23410071> git branch -M main
+PS C:\Users\CCLab-63\Desktop\23410071> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.44 KiB | 1.44 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/NeilLandge/devopspracticalexam
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\CCLab-63\Desktop\23410071> git rm a.txt
+error: the following file has local modifications:
+    a.txt
+(use --cached to keep the file, or -f to force removal)
+PS C:\Users\CCLab-63\Desktop\23410071> git rm -f a.txt
+rm 'a.txt'
+PS C:\Users\CCLab-63\Desktop\23410071> git commit -m "Remove a.txt (initial test file)"
+[main 73eb345] Remove a.txt (initial test file)
+ 1 file changed, 152 deletions(-)
+ delete mode 100644 a.txt
+PS C:\Users\CCLab-63\Desktop\23410071> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (2/2), 216 bytes | 216.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/NeilLandge/devopspracticalexam
+   f1569f1..73eb345  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\CCLab-63\Desktop\23410071> git add .
+PS C:\Users\CCLab-63\Desktop\23410071> git commit -m "added readme"
+[main efaca9e] added readme
+ 1 file changed, 7 insertions(+)
+ create mode 100644 README.md
+PS C:\Users\CCLab-63\Desktop\23410071> git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/NeilLandge/devopspracticalexam
+   73eb345..efaca9e  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\CCLab-63\Desktop\23410071> git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+PS C:\Users\CCLab-63\Desktop\23410071> git add README.md
+PS C:\Users\CCLab-63\Desktop\23410071> git commit -m "update in readme file"
+[feature-branch 4a6e052] update in readme file
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+PS C:\Users\CCLab-63\Desktop\23410071> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\CCLab-63\Desktop\23410071> git add README.md
+PS C:\Users\CCLab-63\Desktop\23410071> git commit -m "update readme in main branch"
+[main b7c3737] update readme in main branch
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+PS C:\Users\CCLab-63\Desktop\23410071> git merge feature-branch
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\CCLab-63\Desktop\23410071> git add README.md
+PS C:\Users\CCLab-63\Desktop\23410071> git commit -m "Add proper documentation for merge conflict resolution"
+[main 7453986] Add proper documentation for merge conflict resolution
+PS C:\Users\CCLab-63\Desktop\23410071> git push origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 1.18 KiB | 1.18 MiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.                                                               
+To https://github.com/NeilLandge/devopspracticalexam
+   efaca9e..7453986  main -> main
+PS C:\Users\CCLab-63\Desktop\23410071> git add README.md
+PS C:\Users\CCLab-63\Desktop\23410071> git commit -m "Add conflict marker example in documentation"
+[main 184e9bd] Add conflict marker example in documentation
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+PS C:\Users\CCLab-63\Desktop\23410071> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.                                                               
+To https://github.com/NeilLandge/devopspracticalexam
+   7453986..184e9bd  main -> main
+PS C:\Users\CCLab-63\Desktop\23410071> git add .
+PS C:\Users\CCLab-63\Desktop\23410071> git commit -m "accepted both changes"
+[main b72c974] accepted both changes
+ 1 file changed, 3 deletions(-)
+PS C:\Users\CCLab-63\Desktop\23410071> git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.                                                               
+To https://github.com/NeilLandge/devopspracticalexam
+   184e9bd..b72c974  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\CCLab-63\Desktop\23410071> git push origin feature-branch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature-branch' on GitHub by visiting:                                                          
+remote:      https://github.com/NeilLandge/devopspracticalexam/pull/new/feature-branch                                             
+remote: 
+To https://github.com/NeilLandge/devopspracticalexam
+ * [new branch]      feature-branch -> feature-branch
+PS C:\Users\CCLab-63\Desktop\23410071> 
